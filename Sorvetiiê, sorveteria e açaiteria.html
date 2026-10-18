@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sorvetiiê, sorveteria e açaiteria em Belo Horizonte</title>
+<meta name="description" content="Sorvetes, gelatos, picolés e açaí no Funcionários, em BH. Peça pelo WhatsApp ou venha tomar o seu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--roxo:#4a0a6e;--roxo2:#2f0646;--amarelo:#ffc90e;--rosa:#d92f6b;--bg:#f6f0fa;--surface:#fff;--text:#2b0a3d;--muted:#5d4a6b;--line:#e2d5ec;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a0527;--surface:#2a0b3d;--text:#fff3da;--muted:#cdb8da;--line:#47235f;--rosa:#ff7aa5;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1a0527;--surface:#2a0b3d;--text:#fff3da;--muted:#cdb8da;--line:#47235f;--rosa:#ff7aa5;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.6 Figtree,system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--roxo);z-index:60}
+h1,h2,h3,.logo,.num{font-family:Fraunces,Georgia,serif;margin:0;line-height:1.05}
+p{margin:0}
+a:focus-visible{outline:3px solid currentColor;outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--roxo)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{color:var(--amarelo);font-weight:900;font-size:28px;text-decoration:none}
+.nav{display:flex;gap:24px;align-items:center}
+.nav a{color:#fff;text-decoration:none;font-weight:500;font-size:15px}
+.nav .btn{color:var(--roxo2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;border:2px solid transparent;line-height:1.1}
+.btn[hidden]{display:none}
+.b-y{background:var(--amarelo);color:var(--roxo2)}
+.b-r{background:var(--roxo);color:#fff}
+.b-l{border-color:currentColor}
+.hero{background:var(--roxo);color:#fff;padding:44px 0 20px}
+.hero .wrap{display:grid;grid-template-columns:1.3fr .7fr;gap:28px;align-items:center}
+.hero h1{font-size:clamp(44px,9vw,96px);font-weight:900;color:var(--amarelo);letter-spacing:-.02em}
+.hero p{font-size:clamp(18px,2.4vw,21px);max-width:30em;margin:20px 0 28px;color:#f1e4fa}
+.acts{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.acts .b-l{color:#fff}
+.cupbox{position:relative;justify-self:center;width:min(100%,290px)}
+.cupbox svg{width:100%;height:auto;display:block;transform:rotate(-5deg)}
+.tag{position:absolute;background:var(--rosa);color:#fff;font-weight:700;font-size:14px;padding:8px 14px;border-radius:12px 12px 12px 2px;transform:rotate(6deg)}
+.t1{right:-6px;top:6px}.t2{left:-10px;bottom:46px;background:var(--amarelo);color:var(--roxo2);transform:rotate(-7deg)}
+.drip{display:block;width:100%;height:92px;background:var(--amarelo)}
+.drip rect{transform-box:fill-box;transform-origin:top;animation:d 1.4s cubic-bezier(.3,.7,.3,1) both}
+@keyframes d{from{transform:scaleY(.08)}}
+@media (prefers-reduced-motion:reduce){.drip rect{animation:none}html{scroll-behavior:auto}}
+.band{background:var(--amarelo);color:var(--roxo2);padding:0 0 38px}
+.band .wrap{display:flex;flex-wrap:wrap;gap:10px 36px;justify-content:space-between;align-items:center;font-weight:500}
+.band a{color:inherit;font-weight:700}
+.st{display:inline-flex;gap:9px;align-items:center;font-weight:700}
+.st::before{content:"";width:11px;height:11px;border-radius:50%;background:#8a7a40}
+.st.on::before{background:#0f9a45;box-shadow:0 0 0 4px rgba(15,154,69,.25)}
+.s{padding:76px 0}
+h2{font-size:clamp(32px,5.5vw,52px);font-weight:900;letter-spacing:-.01em;margin-bottom:12px}
+.lead{color:var(--muted);max-width:34em;margin-bottom:36px}
+.novos{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:40px}
+.nv{border-radius:28px 28px 28px 6px;padding:28px;min-height:210px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+.nv h3{font-size:34px;font-weight:900}
+.nv p{margin-top:8px;max-width:22em}
+.nv b{position:absolute;top:22px;left:28px;font-size:14px;padding:5px 13px;border-radius:99px;background:var(--amarelo);color:var(--roxo2)}
+.nv::after{content:attr(data-e);position:absolute;right:14px;top:6px;font-size:84px;opacity:.95}
+.n1{background:var(--roxo);color:#fff}
+.n2{background:var(--rosa);color:#fff}
+.board{display:grid;grid-template-columns:1fr 1fr;gap:0 56px}
+.cat{padding:8px 0 28px}
+.cat h3{font-size:26px;font-weight:700;padding-bottom:10px;border-bottom:3px solid var(--amarelo);margin-bottom:6px}
+.it{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px dashed var(--line)}
+.it b{font-weight:700}
+.it span{color:var(--muted);font-size:15px;text-align:right;max-width:15em}
+.pr{white-space:nowrap;font-family:Fraunces,Georgia,serif;font-weight:900;font-size:22px;color:var(--rosa)}
+.note{font-size:14px;color:var(--muted);margin-top:4px}
+.acai{background:var(--roxo);color:#fff}
+.acai .wrap{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
+.acai h2{color:var(--amarelo)}
+.acai p{color:#f1e4fa;max-width:32em}
+.big{font-family:Fraunces,Georgia,serif;font-weight:900;font-size:clamp(54px,10vw,96px);color:var(--amarelo);line-height:1}
+.big small{display:block;font:500 16px Figtree,sans-serif;color:#f1e4fa;margin-top:6px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:30px}
+.num{font-size:64px;font-weight:900;color:var(--rosa)}
+.steps h3{font-size:24px;margin:6px 0}
+.steps p{color:var(--muted)}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.hrs{list-style:none;margin:0;padding:0;background:var(--surface);border:2px solid var(--roxo);border-radius:24px;overflow:hidden}
+.hrs li{display:flex;justify-content:space-between;padding:13px 22px;border-bottom:1px solid var(--line)}
+.hrs li:last-child{border-bottom:0}
+.hrs .today{background:var(--amarelo);color:var(--roxo2);font-weight:700}
+.addr{font-size:20px;margin:18px 0 24px;font-weight:500}
+.job{background:var(--roxo2);color:#fff;padding:44px 0}
+.job .wrap{display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center;justify-content:space-between}
+.job h3{font-size:30px;color:var(--amarelo)}
+.job p{max-width:34em;color:#e5d3f2;margin-top:8px}
+footer{background:var(--roxo);color:#e5d3f2;padding:34px 0;font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:space-between;align-items:center}
+footer a{color:#fff;font-weight:700}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;box-shadow:0 8px 24px rgba(47,6,70,.35)}
+@media (max-width:760px){
+.nav a:not(.btn){display:none}
+.hero .wrap,.novos,.board,.acai .wrap,.visit,.steps{grid-template-columns:1fr}
+.cupbox{width:210px}
+.s{padding:56px 0}
+.nv{min-height:190px}
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="logo" href="#">Sorvetiiê</a>
+<nav class="nav"><a href="#cardapio">Cardápio</a><a href="#pedir">Como pedir</a><a href="#local">Onde estamos</a>
+<a class="btn b-y" href="https://wa.me/5531999313712?text=Oi!%20Vim%20pelo%20site%20da%20Sorveti%C3%AA">Pedir agora</a></nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+<div>
+<h1>Sorvetiiê é mais barato que terapia.</h1>
+<p>Sorvetes, gelatos, picolés e açaí no Funcionários, em Belo Horizonte. Peça pelo WhatsApp ou venha tomar o seu.</p>
+<div class="acts">
+<a class="btn b-y" href="https://wa.me/5531999313712?text=Oi!%20Vim%20pelo%20site%20da%20Sorveti%C3%AA%20e%20quero%20fazer%20um%20pedido">Pedir pelo WhatsApp</a>
+<a class="btn b-l ifood" href="#" hidden>Pedir no iFood</a>
+<a class="btn b-l" href="#cardapio">Ver o cardápio</a>
+</div></div>
+<div class="cupbox" aria-hidden="true">
+<svg viewBox="0 0 260 310"><circle cx="98" cy="72" r="50" fill="#ff8fb1"/><circle cx="162" cy="62" r="52" fill="#fff3d6"/><circle cx="128" cy="38" r="9" fill="#d92f6b"/>
+<path d="M30 96H230L206 288Q204 298 194 298H66Q56 298 54 288Z" fill="#ffc90e"/>
+<path d="M30 96H230L226 124C222 146 208 146 206 124C204 110 190 110 188 134C186 158 168 158 166 132C164 114 148 114 146 138C144 156 128 156 126 130C124 114 108 114 106 136C104 156 86 156 84 128C82 112 66 112 64 132C62 150 46 148 42 124Z" fill="#4a0a6e"/>
+<text x="130" y="222" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="900" font-size="38" fill="#4a0a6e">Sorvetiiê</text>
+<text x="130" y="246" text-anchor="middle" font-family="Figtree,sans-serif" font-weight="700" font-size="11" fill="#4a0a6e">sorveteria e açaiteria</text></svg>
+<span class="tag t1">Novo: Raffaello</span><span class="tag t2">Novo: Snickers</span>
+</div></div></section>
+
+<svg class="drip" aria-hidden="true"><g fill="#4a0a6e"><rect width="100%" height="22"/>
+<rect x="4%" width="30" height="62" rx="15" style="animation-delay:.1s"/><rect x="15%" width="22" height="42" rx="11" style="animation-delay:.3s"/><rect x="27%" width="34" height="84" rx="17" style="animation-delay:0s"/><rect x="40%" width="24" height="50" rx="12" style="animation-delay:.4s"/><rect x="53%" width="30" height="72" rx="15" style="animation-delay:.2s"/><rect x="65%" width="22" height="38" rx="11" style="animation-delay:.5s"/><rect x="77%" width="34" height="78" rx="17" style="animation-delay:.15s"/><rect x="90%" width="26" height="54" rx="13" style="animation-delay:.35s"/></g></svg>
+
+<div class="band"><div class="wrap">
+<span class="st" id="st1">Confira se estamos abertos</span>
+<span><a href="#local">R. Sergipe, 109, Funcionários</a></span>
+<span>Seg a sex, 11h às 19h. Sáb e dom, 11h às 18h.</span>
+</div></div>
+
+<section class="s" id="cardapio"><div class="wrap">
+<h2>Cardápio da Sorvetiiê</h2>
+<p class="lead">Os lançamentos da vitrine e o que não pode faltar no seu pedido.</p>
+<div class="novos">
+<div class="nv n1" data-e="🥥"><b>Novo sabor</b><h3>Raffaello</h3><p>Sorvete cremoso inspirado no bombom de coco, finalizado com coco ralado.</p></div>
+<div class="nv n2" data-e="🍫"><b>Novo sabor</b><h3>Snickers</h3><p>Na casquinha, com o gosto do clássico de amendoim, chocolate e caramelo.</p></div>
+</div>
+<div class="board">
+<div class="cat"><h3>Sorvetes e gelatos</h3>
+<div class="it"><b>Chocolate, caramelo e flor de sal</b><span>O doce com um toque salgado</span></div>
+<div class="it"><b>Abacaxi com pedaços</b><span>Cremoso, com abacaxi na massa</span></div>
+<div class="it"><b>Pistache</b><span>Na casquinha ou no copo</span></div>
+<div class="it"><b>Buffet de sorvete</b><span>Escolha os sabores que quiser</span></div></div>
+<div class="cat"><h3>Açaí</h3>
+<div class="it"><b>Açaí 300 ml, na taça ou no copo</b><span>Com banana, morango, leite em pó ou leite condensado</span></div>
+<div class="it"><b>Preço de promoção</b><span class="pr">R$ 16,90</span></div></div>
+<div class="cat"><h3>Cafés e especiais</h3>
+<div class="it"><b>Affogato Sorvetiiê</b><span>Sorvete com café quente por cima</span></div>
+<div class="it"><b>Café coado com Lotus Biscoff</b><span>A combinação perfeita</span></div></div>
+<div class="cat"><h3>Picolés</h3>
+<div class="it"><b>Picolés da casa</b><span>Peça o sabor do dia pelo WhatsApp</span></div></div>
+</div>
+<p class="note">Sabores e valores podem mudar. Confirme no WhatsApp antes de pedir.</p>
+</div></section>
+
+<section class="s acai"><div class="wrap">
+<div><h2>Açaí na promoção</h2><p>Na taça ou no copo, do jeito que você gosta: com banana, morango, leite em pó ou leite condensado. Pergunte pelos dias da promoção.</p>
+<div class="acts" style="margin-top:24px"><a class="btn b-y" href="https://wa.me/5531999313712?text=Oi!%20Quero%20o%20a%C3%A7a%C3%AD%20da%20promo%C3%A7%C3%A3o">Quero o meu açaí</a></div></div>
+<div class="big">R$ 16,90<small>300 ml</small></div>
+</div></section>
+
+<section class="s" id="pedir"><div class="wrap">
+<h2>Pedir é fácil</h2>
+<div class="steps">
+<div><div class="num">1</div><h3>Escolha</h3><p>Veja o cardápio e decida entre sorvete, gelato, picolé, açaí ou um café com sorvete.</p></div>
+<div><div class="num">2</div><h3>Peça</h3><p>Chame no WhatsApp ou faça o pedido pelo iFood. Sem enrolação.</p></div>
+<div><div class="num">3</div><h3>Receba ou venha buscar</h3><p>Receba em casa pelo iFood ou passe na loja, na R. Sergipe, 109.</p></div>
+</div>
+<div class="acts" style="margin-top:36px"><a class="btn b-r" href="https://wa.me/5531999313712?text=Oi!%20Vim%20pelo%20site%20da%20Sorveti%C3%AA%20e%20quero%20fazer%20um%20pedido">Pedir pelo WhatsApp</a><a class="btn b-r ifood" href="#" hidden>Pedir no iFood</a></div>
+</div></section>
+
+<section class="s" id="local" style="padding-top:0"><div class="wrap visit">
+<div><h2>Venha tomar o seu</h2>
+<p class="addr">R. Sergipe, 109, Funcionários<br>Belo Horizonte, MG, 30130-170</p>
+<p style="margin-bottom:24px"><span class="st" id="st2"></span></p>
+<div class="acts"><a class="btn b-r" href="https://www.google.com/maps/search/?api=1&query=R.+Sergipe+109+Funcion%C3%A1rios+Belo+Horizonte" target="_blank" rel="noopener">Como chegar</a><a class="btn b-l" href="tel:+5531999313712">(31) 99931-3712</a></div></div>
+<ul class="hrs">
+<li data-d="0"><span>Domingo</span><span>11h às 18h</span></li>
+<li data-d="1"><span>Segunda</span><span>11h às 19h</span></li>
+<li data-d="2"><span>Terça</span><span>11h às 19h</span></li>
+<li data-d="3"><span>Quarta</span><span>11h às 19h</span></li>
+<li data-d="4"><span>Quinta</span><span>11h às 19h</span></li>
+<li data-d="5"><span>Sexta</span><span>11h às 19h</span></li>
+<li data-d="6"><span>Sábado</span><span>11h às 18h</span></li>
+</ul></div></section>
+
+<section class="job"><div class="wrap">
+<div><h3>Quer trabalhar na Sorvetiiê?</h3><p>Estamos contratando, para freelancer e carteira assinada. Precisa ter mais de 18 anos, ensino médio completo e ser comunicativo. Não precisa de experiência.</p></div>
+<a class="btn b-y" href="https://wa.me/5531999313712?text=Oi!%20Quero%20enviar%20meu%20curr%C3%ADculo">Enviar currículo</a>
+</div></section>
+
+<footer><div class="wrap">
+<span><b style="color:#ffc90e">Sorvetiiê</b>, sorveteria e açaiteria. R. Sergipe, 109, Funcionários, BH.</span>
+<span><a href="https://www.instagram.com/sorvetiie/" target="_blank" rel="noopener">@sorvetiie</a> no Instagram</span>
+</div></footer>
+
+<a class="btn b-y fab" href="https://wa.me/5531999313712?text=Oi!%20Vim%20pelo%20site%20da%20Sorveti%C3%AA">💬 Pedir</a>
+
+<script>
+const IFOOD="";
+if(IFOOD)document.querySelectorAll(".ifood").forEach(a=>{a.href=IFOOD;a.target="_blank";a.rel="noopener";a.hidden=false});
+const H={0:[11,18],6:[11,18]};for(let i=1;i<6;i++)H[i]=[11,19];
+const n=new Date(new Date().toLocaleString("en-US",{timeZone:"America/Sao_Paulo"}));
+const d=n.getDay(),m=n.getHours()*60+n.getMinutes(),o=H[d][0],c=H[d][1];
+let t,on=false;
+if(m>=o*60&&m<c*60){on=true;t="Aberto agora, fechamos às "+c+"h"}
+else if(m<o*60){t="Fechado agora, abrimos hoje às "+o+"h"}
+else{t="Fechado agora, abrimos amanhã às 11h"}
+["st1","st2"].forEach(id=>{const e=document.getElementById(id);e.textContent=t;if(on)e.classList.add("on")});
+const r=document.querySelector('[data-d="'+d+'"]');if(r)r.classList.add("today");
+</script>
+</body>
+</html>
